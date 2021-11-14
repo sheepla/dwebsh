@@ -12,7 +12,12 @@ websh COMMAND # --> Run the COMMAND on the shellgei bot environment
 
 Requires [deno](https://deno.land/deno), testing on `v1.16.1`.
 
-Clone this repository then run below.
+```bash
+deno install --allow-net --name websh-deno \
+    https://raw.githubusercontent.com/sheepla/websh-deno/master/cli.ts
+```
+
+... or clone this repository then run below.
 
 ```bash
 make build && sudo make install
