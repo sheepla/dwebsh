@@ -1,3 +1,7 @@
+// import {
+//     commandWithVersion,
+//     ValidationError,
+// } from "./deps.ts"
 import { post } from "./mod.ts";
 
 if (Deno.args.length != 1) {
