@@ -4,8 +4,19 @@ A command line [websh](https://github.com/jiro4989/websh) client powered by deno
 
 ## Usage
 
-```bash
-websh COMMAND # --> Run the COMMAND on the shellgei bot environment
+```
+$ websh-deno --help
+  Usage:   websh-deno <code:string>
+  Version: v0.0.1
+
+  Description:
+
+    A command line websh client powered by Deno
+
+  Options:
+
+    -h, --help     - Show this help.
+    -V, --version  - Show the version number for this program.
 ```
 
 ## Installation
@@ -22,4 +33,3 @@ deno install --allow-net --name websh-deno \
 ```bash
 make build && sudo make install
 ```
-
