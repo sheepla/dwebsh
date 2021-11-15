@@ -24,3 +24,7 @@ install:
 .PHONY: uninstall
 uninstall:
 	rm -f $(DEST)
+
+.PHONY: clean
+clean:
+	rm ./bin/*
