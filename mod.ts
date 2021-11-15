@@ -1,5 +1,3 @@
-const baseUrl = "https://websh.jiro4989.com/api";
-
 // async function ping() {
 //   const pingUrl = baseUrl + "/ping";
 //   const res = await fetch(pingUrl, { method: "GET" });
@@ -7,6 +5,7 @@ const baseUrl = "https://websh.jiro4989.com/api";
 // }
 
 export async function post(code: string) {
+  const baseUrl = "https://websh.jiro4989.com/api";
   const postUrl = baseUrl + "/shellgei";
   const data = { code: code, images: [] };
   const res = await fetch(postUrl, {
