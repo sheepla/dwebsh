@@ -33,3 +33,7 @@ deno install --allow-net --name websh-deno \
 ```bash
 make build && sudo make install
 ```
+
+## LICENSE
+
+MIT
