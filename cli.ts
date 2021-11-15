@@ -1,14 +1,18 @@
-// import {
-//     commandWithVersion,
-//     ValidationError,
-// } from "./deps.ts"
+import { version } from "./version.ts";
+import { Command } from "./deps.ts";
 import { post } from "./mod.ts";
 
-if (Deno.args.length != 1) {
-  console.error("Invalid number of arguments...");
-  Deno.exit(1);
-}
+try {
+  const { args } = await new Command()
+    .name("websh-deno")
+    .description("A command line websh client powered by Deno")
+    .version(version)
+    .arguments("<code:string>")
+    .parse(Deno.args);
 
-const res = await post(Deno.args[0]);
-console.log(res["stdout"]);
-console.error(res["stderr"]);
+  const res = await post(args[0]);
+  console.log(res["stdout"]);
+  console.error(res["stderr"]);
+} catch (error) {
+  console.error(`${error}`);
+}
