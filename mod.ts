@@ -1,3 +1,5 @@
+import { decode, writeAll } from "./deps.ts";
+
 export async function post(code: string) {
   const baseUrl = "https://websh.jiro4989.com/api";
   const postUrl = baseUrl + "/shellgei";
@@ -10,4 +12,15 @@ export async function post(code: string) {
     body: JSON.stringify(data),
   });
   return res.json();
+}
+
+export async function saveImage(base64image: string) {
+  const image = decode(base64image);
+  const path = await Deno.makeTempFile({
+    prefix: "websh-deno_",
+  });
+  const file = await Deno.open(path, { write: true });
+  await writeAll(file, image);
+  file.close();
+  return path;
 }

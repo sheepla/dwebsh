@@ -15,7 +15,7 @@ fmt:
 
 .PHONY: build
 build:
-	deno compile --allow-net -o $(SRC) cli.ts 
+	deno compile --allow-net --allow-write --allow-read -o $(SRC) cli.ts 
 
 .PHONY: install
 install:
