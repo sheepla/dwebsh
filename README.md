@@ -36,4 +36,4 @@ make build && sudo make install
 
 ## LICENSE
 
-MIT
+[MIT](./LICENSE)
