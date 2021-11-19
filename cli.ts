@@ -15,8 +15,7 @@ try {
   console.error(res["stderr"]);
 
   for (const img of res["images"]) {
-    const base64image = img["image"];
-    const path = await saveImage(base64image);
+    const path = await saveImage(img["image"], img["format"]);
     console.log(`Image saved: ${path}`);
   }
 } catch (error) {

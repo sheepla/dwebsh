@@ -14,10 +14,11 @@ export async function post(code: string) {
   return res.json();
 }
 
-export async function saveImage(base64image: string) {
+export async function saveImage(base64image: string, extension: string) {
   const image = decode(base64image);
   const path = await Deno.makeTempFile({
     prefix: "websh-deno_",
+    suffix: extension === undefined ? "" : `.${extension}`,
   });
   const file = await Deno.open(path, { write: true });
   await writeAll(file, image);
