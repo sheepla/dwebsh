@@ -45,7 +45,9 @@ Image saved: /tmp/websh-deno_76a6b2f5.png
 
 ### Upload local images
 
-You can upload and use local images. If you specify the image path in the `-i` / `--images` option and execute it, it will be saved in `0`, `1`, ... files under the `/media/` directory on the websh environment.
+You can upload and use local images. If you specify the image path in the `-i` /
+`--images` option and execute it, it will be saved in `0`, `1`, ... files under
+the `/media/` directory on the websh environment.
 
 ```
 $ websh-deno --images ~/pic/unko.png --images ~/pic/unkoq.png 'ls -lA /media'

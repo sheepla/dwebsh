@@ -18,9 +18,9 @@ try {
 
   const base64images: string[] = [];
   if (images !== undefined) {
-      for (const path of images) {
-        base64images.push(await encodeImage(path));
-      }
+    for (const path of images) {
+      base64images.push(await encodeImage(path));
+    }
   }
   const res = await post(code, base64images);
 
