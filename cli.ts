@@ -11,8 +11,16 @@ try {
     .parse(Deno.args);
 
   const res = await post(args[0]);
-  console.log(res["stdout"]);
-  console.error(res["stderr"]);
+  const stdout = res["stdout"];
+
+  if (stdout !== "") {
+    console.log(stdout);
+  }
+
+  const stderr = res["stderr"];
+  if (stderr !== "") {
+    console.error(stderr);
+  }
 
   for (const img of res["images"]) {
     const path = await saveImage(img["image"], img["format"]);
