@@ -12,6 +12,7 @@ A command line [websh](https://github.com/jiro4989/websh) client powered by deno
 
 ```
 $ websh-deno --help
+
   Usage:   websh-deno <code:string>
   Version: v0.0.1
 
@@ -21,8 +22,9 @@ $ websh-deno --help
 
   Options:
 
-    -h, --help     - Show this help.
-    -V, --version  - Show the version number for this program.
+    -h, --help               - Show this help.
+    -V, --version            - Show the version number for this program.
+    -i, --images   <images>  - image files to upload
 ```
 
 ### Run commands
