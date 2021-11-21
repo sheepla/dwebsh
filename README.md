@@ -52,7 +52,7 @@ You can upload and use local images. If you specify the image path in the `-i` /
 the `/media/` directory on the websh environment.
 
 ```
-$ websh-deno --images ~/pic/unko.png --images ~/pic/unkoq.png 'ls -lA /media'
+$ websh-deno --images ~/pic/foo.png --images ~/pic/bar.png 'ls -lA /media'
 合計 12
 -rw-r--r-- 1 root root  828 11月 21 19:21 0
 -rw-r--r-- 1 root root 6434 11月 21 19:21 1
