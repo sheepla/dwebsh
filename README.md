@@ -5,13 +5,13 @@
 <div align="center">
 
 # 🦕 websh-deno
-  
+
 </div>
 
 <div align="center">
 
 A command line [websh](https://github.com/jiro4989/websh) client powered by deno
-  
+
 </div>
 
 ## Features
