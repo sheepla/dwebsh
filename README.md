@@ -1,6 +1,18 @@
-# websh-deno 🦕
+<div align="right">
+  <img src="https://img.shields.io/static/v1?label=License&message=MIT&color=blue&style=flat-square"/>
+</div>
+
+<div align="center">
+
+# 🦕 websh-deno
+  
+</div>
+
+<div align="center">
 
 A command line [websh](https://github.com/jiro4989/websh) client powered by deno
+  
+</div>
 
 ## Features
 
