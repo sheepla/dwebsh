@@ -1,18 +1,30 @@
 import { version } from "./version.ts";
 import { Command } from "./deps.ts";
-import { post, saveImage } from "./mod.ts";
+import { encodeImage, post, saveImage } from "./mod.ts";
 
 try {
-  const { args } = await new Command()
+  const { options, args } = await new Command()
     .name("websh-deno")
     .description("A command line websh client powered by Deno")
     .version(version)
+    .option("-i, --images <images:string>", "image files to upload", {
+      collect: true,
+    })
     .arguments("<code:string>")
     .parse(Deno.args);
 
-  const res = await post(args[0]);
-  const stdout = res["stdout"];
+  const code: string = args[0];
+  const images: string = options["images"];
 
+  const base64images: string[] = [];
+  if (images !== undefined) {
+    for (const path of images) {
+      base64images.push(await encodeImage(path));
+    }
+  }
+  const res = await post(code, base64images);
+
+  const stdout = res["stdout"];
   if (stdout !== "") {
     console.log(stdout);
   }

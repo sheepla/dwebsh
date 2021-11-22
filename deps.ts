@@ -3,5 +3,8 @@ import {
   decode,
   encode,
 } from "https://deno.land/std@0.114.0/encoding/base64.ts";
-import { writeAll } from "https://deno.land/std@0.114.0/streams/conversion.ts";
-export { Command, decode, encode, writeAll };
+import {
+  readAll,
+  writeAll,
+} from "https://deno.land/std@0.114.0/streams/conversion.ts";
+export { Command, decode, encode, readAll, writeAll };
