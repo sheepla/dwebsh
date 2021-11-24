@@ -1,3 +1,4 @@
+import { commandName } from "./version.ts";
 import { decode, encode, readAll, writeAll } from "./deps.ts";
 
 export async function post(code: string, base64images: string[]) {
@@ -17,7 +18,7 @@ export async function post(code: string, base64images: string[]) {
 export async function saveImage(base64image: string, extension: string) {
   const image = decode(base64image);
   const path = await Deno.makeTempFile({
-    prefix: "websh-deno_",
+    prefix: `${commandName}_`,
     suffix: extension === undefined ? "" : `.${extension}`,
   });
   const file = await Deno.open(path, { write: true });
