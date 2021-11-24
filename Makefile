@@ -1,7 +1,7 @@
 PREFIX ?= /usr/local
 BINDIR := $(PREFIX)/bin
 
-NAME := websh-deno
+NAME := dwebsh
 SRC := bin/$(NAME)
 DEST := $(BINDIR)/$(NAME)
 

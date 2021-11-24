@@ -1,10 +1,10 @@
-import { version } from "./version.ts";
+import { commandName, version } from "./version.ts";
 import { Command } from "./deps.ts";
 import { encodeImage, post, saveImage } from "./mod.ts";
 
 try {
   const { options, args } = await new Command()
-    .name("websh-deno")
+    .name(commandName)
     .description("A command line websh client powered by Deno")
     .version(version)
     .option("-i, --images <images:string>", "image files to upload", {

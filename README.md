@@ -4,7 +4,7 @@
 
 <div align="center">
 
-# 🦕 websh-deno
+# 🦕 dwebsh
 
 </div>
 
@@ -23,9 +23,9 @@ A command line [websh](https://github.com/jiro4989/websh) client powered by deno
 ## Usage
 
 ```
-$ websh-deno --help
+$ dwebsh --help
 
-  Usage:   websh-deno <code:string>
+  Usage:   dwebsh <code:string>
   Version: v0.0.2
 
   Description:
@@ -44,7 +44,7 @@ $ websh-deno --help
 Just specify the command you want to execute in the first argument.
 
 ```
-$ websh-deno 'uname -a'
+$ dwebsh 'uname -a'
 Linux e143d8fdbb59 4.15.0-55-generic #60-Ubuntu SMP Tue Jul 2 18:22:20 UTC 2019 x86_64 x86_64 x86_64 GNU/Linux
 ```
 
@@ -53,8 +53,8 @@ Linux e143d8fdbb59 4.15.0-55-generic #60-Ubuntu SMP Tue Jul 2 18:22:20 UTC 2019 
 To save images, output the image files to `/images/` on the websh environment.
 
 ```
-$ websh-deno 'screenfetch | textimg -o /images/out.png'
-Image saved: /tmp/websh-deno_76a6b2f5.png
+$ dwebsh 'screenfetch | textimg -o /images/out.png'
+Image saved: /tmp/dwebsh_76a6b2f5.png
 ```
 
 ### Upload local images
@@ -64,7 +64,7 @@ You can upload and use local images. If you specify the image path in the `-i` /
 the `/media/` directory on the websh environment.
 
 ```
-$ websh-deno --images ~/pic/foo.png --images ~/pic/bar.png 'ls -lA /media'
+$ dwebsh --images ~/pic/foo.png --images ~/pic/bar.png 'ls -lA /media'
 合計 12
 -rw-r--r-- 1 root root  828 11月 21 19:21 0
 -rw-r--r-- 1 root root 6434 11月 21 19:21 1
@@ -75,8 +75,8 @@ $ websh-deno --images ~/pic/foo.png --images ~/pic/bar.png 'ls -lA /media'
 Requires [deno](https://deno.land/deno), testing on `v1.16.1`.
 
 ```bash
-deno install --allow-net --allow-write --name websh-deno \
-    https://raw.githubusercontent.com/sheepla/websh-deno/master/cli.ts
+deno install --allow-net --allow-write --name dwebsh \
+    https://raw.githubusercontent.com/sheepla/dwebsh/master/cli.ts
 ```
 
 ... or clone this repository then run below.
